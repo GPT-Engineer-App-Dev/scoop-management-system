@@ -1,25 +1,22 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 function Index() {
-  console.log("I am here!")
   return (
-    <>
-      {/* REPLACE & ADAPT THIS FILE AND THE SharedLayout.jsx FILE */}
-      <div className="flex items-center">
-        <h1 className="text-lg font-semibold md:text-2xl">Inventory</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold mb-8">Welcome to Ice Cream Parlor Management System</h1>
+      <div className="space-x-4">
+        <Link to="/flavors">
+          <Button variant="outline">Manage Flavors</Button>
+        </Link>
+        <Link to="/inventory">
+          <Button variant="outline">Manage Inventory</Button>
+        </Link>
+        <Link to="/sales">
+          <Button variant="outline">Track Sales</Button>
+        </Link>
       </div>
-      <div className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm">
-        <div className="flex flex-col items-center gap-1 text-center">
-          <h3 className="text-2xl font-bold tracking-tight">
-            Here is you blank canvas
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Start interating on this template to build your app
-          </p>
-          <Button className="mt-4">Click me</Button>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
 
